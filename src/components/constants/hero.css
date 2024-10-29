@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+  
+  .hero {
+    background-image: url('https://s3.us-west-2.amazonaws.com/workstreams-website-v3/general/workstreams-calendar-hero.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .typewriter {
+    display: inline-block;
+    line-height: 1.5;
+    max-width: 90%; /* Limit width to ensure text wraps within the overlay */
+  }
+  
+  /* Add a new class for the blurred background */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit; /* Use the same background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur intensity */
+    z-index: -1; /* Send the blur behind the overlay */
+  }
+  
+  @media (max-width: 600px) {
+    .overlay {
+      padding: 10px;
+    }
+    
+    .typewriter {
+      font-size: 1.5rem;
+    }
+  }
+  

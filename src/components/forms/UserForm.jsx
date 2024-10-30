@@ -26,7 +26,6 @@ const UserForm = () => {
   const { data, isLoading, refetch } = useGetUserProfileQuery({ token }, { skip: !token });
 
   const [formData, setFormData] = useState({
-    auth0Id: '', // Can optionally be displayed or used internally
     name: '',
     email: 'user@example.com',
     company: '',

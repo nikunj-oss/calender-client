@@ -142,9 +142,9 @@ const Events = () => {
                 <IconButton onClick={() => handleDeleteOpen(event)} color="error">
                   <DeleteIcon />
                 </IconButton>
-                <IconButton onClick={()=>{
+                <IconButton onClick={()=>
                   setReminder(event)
-                }}>
+                }>
                   {event?.remind ?(<Alarm/>):(<AlarmOffTwoTone/>)}
                 </IconButton>
               </Box>
